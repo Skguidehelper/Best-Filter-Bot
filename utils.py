@@ -71,7 +71,7 @@ async def check_reset_time():
         await asyncio.sleep(time_diff)
         await db.reset_all_files_count()
         await db.reset_allsend_files()
-        logging.info("Files count and send count reset successfully")
+        logging.info("🎀 Files count and send count reset successfully🤩")
 
 async def get_seconds(time_string):
     def extract_value_and_unit(ts):
@@ -365,7 +365,7 @@ async def get_text(settings, remaining_seconds, files, query, total_results, sea
     try:
         if settings["imdb"]:
             IMDB_CAP = temp.IMDB_CAP.get(query.from_user.id)
-            CAPTION = f"☠️ ᴛɪᴛʟᴇ : <code>{search}</code>\n📂 ᴛᴏᴛᴀʟ ꜰɪʟᴇꜱ : <code>{total_results}</code>\n📝 ʀᴇǫᴜᴇsᴛᴇᴅ ʙʏ : {query.from_user.first_name}\n⏰ ʀᴇsᴜʟᴛ ɪɴ : <code>{remaining_seconds} Sᴇᴄᴏɴᴅs</code>\n\n</b>"
+            CAPTION = f"☠️ ᴛɪᴛʟᴇ 👻: <code>{search}</code>\n📂 ᴛᴏᴛᴀʟ ꜰɪʟᴇꜱ : <code>{total_results}</code>\n📝 ʀᴇǫᴜᴇsᴛᴇᴅ ʙʏ : {query.from_user.first_name}\n⏰ ʀᴇsᴜʟᴛ ɪɴ : <code>{remaining_seconds} Sᴇᴄᴏɴᴅs</code>\n\n</b>"
             if IMDB_CAP:
                 cap = IMDB_CAP
                 for file in files: #shortlink = false, imdb = true
@@ -415,7 +415,7 @@ async def get_text(settings, remaining_seconds, files, query, total_results, sea
     
         else:
             #imdb = false
-            cap = f"☠️ ᴛɪᴛʟᴇ : <code>{search}</code>\n📂 ᴛᴏᴛᴀʟ ꜰɪʟᴇꜱ : <code>{total_results}</code>\n📝 ʀᴇǫᴜᴇsᴛᴇᴅ ʙʏ : {query.from_user.first_name}\n⏰ ʀᴇsᴜʟᴛ ɪɴ : <code>{remaining_seconds}\n\n</b>"
+            cap = f"☠️ ᴛɪᴛʟᴇ 👻 : <code>{search}</code>\n📂 ᴛᴏᴛᴀʟ ꜰɪʟᴇꜱ : <code>{total_results}</code>\n📝 ʀᴇǫᴜᴇsᴛᴇᴅ ʙʏ : {query.from_user.first_name}\n⏰ ʀᴇsᴜʟᴛ ɪɴ : <code>{remaining_seconds}\n\n</b>"
             cap+="<b>📚 <u>Your Requested Files</u> 👇\n\n</b>"
             for file in files:
                 cap += f"<b><a href='https://telegram.me/{temp.U_NAME}?start=files_{query.message.chat.id}_{file.file_id}'>📁 {get_size(file.file_size)} ▷ {file.file_name}\n\n</a></b>"
