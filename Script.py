@@ -222,7 +222,9 @@ Money heist S0E01
 🏷 Title: <a href={url}>{title}</a>
 🎭 Genres: {genres}
 📆 Year: <a href={url}/releaseinfo>{year}</a>
-🌟 Rating: <a href={url}/ratings>{rating}</a> / 10</b> """
+🌟 Rating: <a href={url}/ratings>{rating}</a> / 10</b>
+
+🔥 Bʏ @MOVIES_HD_STORE ⚡</b>"""
     
     CHANNELS = """
 <b>✅ ᴊᴏɪɴ ᴛʜɪs ᴄʜᴀɴɴᴇʟ ғᴏʀ ʀᴇᴘᴏ ᴜᴘᴅᴀᴛᴇs 🔥 </b>"""
@@ -409,7 +411,9 @@ Failed: `{}`"""
 📅 Dᴀᴛᴇ : <code>{}</code>
 ⏰ Tɪᴍᴇ : <code>{}</code>
 🌐 Tɪᴍᴇᴢᴏɴᴇ : <code>Asia/Kolkata</code>
-🛠️ Bᴜɪʟᴅ Sᴛᴀᴛᴜs: <code>v2.7.1 [ Sᴛᴀʙʟᴇ ]</code></b>"""
+🛠️ Bᴜɪʟᴅ Sᴛᴀᴛᴜs: <code>v2.7.1 [ Sᴛᴀʙʟᴇ ]</code></b>
+
+🔥 Bʏ @SAKSHI_UPDATES ⚡</b>"""
 
     LOGO = """ 
 ░█████╗░░█████╗░███╗░░██╗░██████╗░██████╗░░█████╗░████████╗░██████╗
