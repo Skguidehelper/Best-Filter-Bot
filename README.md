@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://graph.org/file/07038c2e2f6211fc132c0.jpg" alt="Safari-Filter-Bot Logo">
+  <img src="https://graph.org/file/07038c2e2f6211fc132c0.jpg" alt="😎 Alexa-Filter-Bot 🔥 Logo">
 </p>
 <h1 align="center">
   𝑺𝒂𝒇𝒂𝒓𝒊-𝑭𝒊𝒍𝒕𝒆𝒓-𝑩𝒐𝒕
@@ -44,7 +44,7 @@
 🔷 𝑹𝒆𝒎𝒐𝒗𝒆 𝑼𝒏𝒔𝒆𝒂𝒔𝒆𝒚 𝑼𝒔𝒆𝒍𝒆𝒔𝒔 𝑾𝒐𝒓𝒅
 🔷 𝑨𝒏𝒅 𝑮𝒓𝒐𝒖𝒑 𝑪𝒐𝒏𝒕𝒓𝒐𝒍 𝑭𝒆𝒂𝒕𝒖𝒓𝒆𝒔
 
-<b>𝙅𝙤𝙞𝙣 𝘽𝙤𝙩 𝙐𝙥𝙙𝙖𝙩𝙚𝙨 𝘾𝙝𝙖𝙣𝙣𝙚𝙡 <a href='https://telegram.me/SafariBotts'>𝐁𝐨𝐭 𝐔𝐩𝐝𝐚𝐭𝐞 𝐈𝐧𝐟𝐨𝐫𝐦𝐚𝐭𝐢𝐨𝐧</a>.</b>
+<b>𝙅𝙤𝙞𝙣 𝘽𝙤𝙩 𝙐𝙥𝙙𝙖𝙩𝙚𝙨 𝘾𝙝𝙖𝙣𝙣𝙚𝙡 <a href='https://telegram.me/Movies_Hd_Store'>𝐁𝐨𝐭 𝐔𝐩𝐝𝐚𝐭𝐞 𝐈𝐧𝐟𝐨𝐫𝐦𝐚𝐭𝐢𝐨𝐧</a>.</b>
 
 ## 𝐶𝑜𝑚𝑚𝑎𝑛𝑑𝑠
 
