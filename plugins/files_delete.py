@@ -1,4 +1,4 @@
-# This code has been modified by @Safaridev
+# This code has been modified by @ll_Alexa_Owner_ll
 # Please do not remove this credit
 import re
 import logging
@@ -13,7 +13,7 @@ media_filter = filters.document | filters.video | filters.audio
 
 @Client.on_message(filters.chat(DELETE_CHANNELS) & media_filter)
 async def deletemultiplemedia(bot, message):
-    """Delete Multiple files from database"""
+    """‼️Delete Multiple files from database ⚜️"""
 
     for file_type in ("document", "video", "audio"):
         media = getattr(message, file_type, None)
@@ -28,7 +28,7 @@ async def deletemultiplemedia(bot, message):
         '_id': file_id,
     })
     if result.deleted_count:
-        logger.info('File is successfully deleted from database.')
+        logger.info('💢 File is successfully deleted from database.🎊')
     else:
         file_name = re.sub(r"(_|\-|\.|\+)", " ", str(media.file_name))
         result = await Media.collection.delete_many({
@@ -37,7 +37,7 @@ async def deletemultiplemedia(bot, message):
             'mime_type': media.mime_type
             })
         if result.deleted_count:
-            logger.info('File is successfully deleted from database.')
+            logger.info('🎊 File is successfully deleted from database.💢')
         else:
             result = await Media.collection.delete_many({
                 'file_name': media.file_name,
@@ -45,6 +45,6 @@ async def deletemultiplemedia(bot, message):
                 'mime_type': media.mime_type
             })
             if result.deleted_count:
-                logger.info('File is successfully deleted from database.')
+                logger.info('🎊 File is successfully deleted from database.🔰')
             else:
-                logger.info('File not found in database.')
+                logger.info('👀 File not found in database.🚫')
