@@ -656,7 +656,7 @@ async def settings(client, message):
         reply_markup = InlineKeyboardMarkup(buttons)
         if chat_type in [enums.ChatType.GROUP, enums.ChatType.SUPERGROUP]:
             await message.reply_text(
-                text="<b>Dᴏ ʏᴏᴜ ᴡᴀɴᴛ ᴛᴏ ᴏᴘᴇɴ sᴇᴛᴛɪɴɢs ʜᴇʀᴇ ?</b>",
+                text="<b>👀 Dᴏ ʏᴏᴜ ᴡᴀɴᴛ ᴛᴏ ᴏᴘᴇɴ sᴇᴛᴛɪɴɢs ʜᴇʀᴇ ?💢 </b>",
                 reply_markup=reply_markup, 
                 disable_web_page_preview=True,
                 parse_mode=enums.ParseMode.HTML,
@@ -664,7 +664,7 @@ async def settings(client, message):
             )
         else:
             await message.reply_text(
-                text=f"<b>Cʜᴀɴɢᴇ Yᴏᴜʀ Sᴇᴛᴛɪɴɢs Fᴏʀ {title} As Yᴏᴜʀ Wɪsʜ ⚙</b>",
+                text=f"<b>⚜️ Cʜᴀɴɢᴇ Yᴏᴜʀ Sᴇᴛᴛɪɴɢs Fᴏʀ {title} As Yᴏᴜʀ Wɪsʜ ⚙ 🦋</b>",
                 reply_markup=reply_markup,
                 disable_web_page_preview=True,
                 parse_mode=enums.ParseMode.HTML,
@@ -676,79 +676,79 @@ async def settings(client, message):
 async def set_tutorial_1(client, message):
     chat_type = message.chat.type
     if chat_type not in [enums.ChatType.GROUP, enums.ChatType.SUPERGROUP]:
-        return await message.reply_text("<b>ᴜsᴇ ᴛʜɪs ᴄᴏᴍᴍᴀɴᴅ ɪɴ ɢʀᴏᴜᴘ...</b>")
+        return await message.reply_text("<b>🕊 ᴜsᴇ ᴛʜɪs ᴄᴏᴍᴍᴀɴᴅ ɪɴ ɢʀᴏᴜᴘ...🦄</b>")
     grp_id = message.chat.id
     title = message.chat.title
     invite_link = await client.export_chat_invite_link(grp_id)
     user = await client.get_chat_member(message.chat.id, message.from_user.id)
     owner=user.status in [enums.ChatMemberStatus.ADMINISTRATOR, enums.ChatMemberStatus.OWNER] or str(message.from_user.id) in ADMINS
     if not owner:
-        return await message.reply_text('<b>ʏᴏᴜ ᴀʀᴇ ɴᴏᴛ ᴀᴅᴍɪɴ ɪɴ ᴛʜɪꜱ ɢʀᴏᴜᴘ</b>')
+        return await message.reply_text('<b>💐 ʏᴏᴜ ᴀʀᴇ ɴᴏᴛ ᴀᴅᴍɪɴ ɪɴ ᴛʜɪꜱ ɢʀᴏᴜᴘ 💢</b>')
     chat_type = message.chat.type
     if chat_type not in [enums.ChatType.GROUP, enums.ChatType.SUPERGROUP]:
-        return await message.reply_text(f"<b>ᴜꜱᴇ ᴛʜɪꜱ ᴄᴏᴍᴍᴀɴᴅ ɪɴ ɢʀᴏᴜᴘ...\n\nGroup Name: {title}\nGroup ID: {grp_id}\nGroup Invite Link: {invite_link}</b>")
+        return await message.reply_text(f"<b>👻 ᴜꜱᴇ ᴛʜɪꜱ ᴄᴏᴍᴍᴀɴᴅ ɪɴ ɢʀᴏᴜᴘ...\n\nGroup Name: {title}\nGroup ID: {grp_id}\nGroup Invite Link: {invite_link}</b>")
     try:
         tutorial = message.text.split(" ", 1)[1]
     except:
-        return await message.reply_text("<b>Command Incomplete!!\n\nuse like this -</b>\n\n<code>/set_tutorial https://t.me/safaribotts</code>")
+        return await message.reply_text("<b>😐 Command Incomplete!!\n\nuse like this -</b>\n\n<code>/set_tutorial https://t.me/Alexa_Update</code>")
     await save_group_settings(grp_id, 'tutorial', tutorial)
-    await message.reply_text(f"<b>Successfully changed tutorial for {title}</b>\n\nLink - {tutorial}", disable_web_page_preview=True)
-    await client.send_message(LOG_CHANNEL, f"Tutorial for {title} (Group ID: {grp_id}, Invite Link: {invite_link}) has been updated by {message.from_user.username}")
+    await message.reply_text(f"<b>🔥 Successfully changed tutorial for {title}</b>\n\nLink - {tutorial}", disable_web_page_preview=True)
+    await client.send_message(LOG_CHANNEL, f"🥀 Tutorial for {title} (Group ID: {grp_id}, Invite Link: {invite_link}) has been updated by {message.from_user.username}")
 
 @Client.on_message(filters.command('set_tutorial_2'))
 async def set_tutorial_2(client, message):
     chat_type = message.chat.type
     if chat_type not in [enums.ChatType.GROUP, enums.ChatType.SUPERGROUP]:
-        return await message.reply_text("<b>ᴜsᴇ ᴛʜɪs ᴄᴏᴍᴍᴀɴᴅ ɪɴ ɢʀᴏᴜᴘ...</b>")
+        return await message.reply_text("<b>⚡ ᴜsᴇ ᴛʜɪs ᴄᴏᴍᴍᴀɴᴅ ɪɴ ɢʀᴏᴜᴘ...🍿</b>")
     grp_id = message.chat.id
     title = message.chat.title
     invite_link = await client.export_chat_invite_link(grp_id)
     user = await client.get_chat_member(message.chat.id, message.from_user.id)
     owner=user.status in [enums.ChatMemberStatus.ADMINISTRATOR, enums.ChatMemberStatus.OWNER] or str(message.from_user.id) in ADMINS
     if not owner:
-        return await message.reply_text('<b>ʏᴏᴜ ᴀʀᴇ ɴᴏᴛ ᴀᴅᴍɪɴ ɪɴ ᴛʜɪꜱ ɢʀᴏᴜᴘ</b>')
+        return await message.reply_text('<b>♻️ ʏᴏᴜ ᴀʀᴇ ɴᴏᴛ ᴀᴅᴍɪɴ ɪɴ ᴛʜɪꜱ ɢʀᴏᴜᴘ 🐣</b>')
     try:
         tutorial = message.text.split(" ", 1)[1]
     except:
-        return await message.reply_text("<b>Command Incomplete!!\n\nuse like this -</b>\n\n<code>/set_tutorial https://t.me/safaribotts</code>")
+        return await message.reply_text("<b>😐 Command Incomplete!!\n\nuse like this -</b>\n\n<code>/set_tutorial https://t.me/Alexa_Update</code>")
     await save_group_settings(grp_id, 'tutorial2', tutorial)
-    await message.reply_text(f"<b>Successfully changed tutorial for {title}</b>\n\nLink - {tutorial}", disable_web_page_preview=True)
-    await client.send_message(LOG_CHANNEL, f"Tutorial 2 for {title} (Group ID: {grp_id}, Invite Link: {invite_link}) has been updated by {message.from_user.username}")
+    await message.reply_text(f"<b>🎉 Successfully changed tutorial for {title}</b>\n\nLink - {tutorial}", disable_web_page_preview=True)
+    await client.send_message(LOG_CHANNEL, f"🥀 Tutorial 2 for {title} (Group ID: {grp_id}, Invite Link: {invite_link}) has been updated by {message.from_user.username}")
 
 @Client.on_message(filters.command('set_tutorial_3'))
 async def set_tutorial_3(client, message):
     chat_type = message.chat.type
     if chat_type not in [enums.ChatType.GROUP, enums.ChatType.SUPERGROUP]:
-        return await message.reply_text("<b>ᴜsᴇ ᴛʜɪs ᴄᴏᴍᴍᴀɴᴅ ɪɴ ɢʀᴏᴜᴘ...</b>")
+        return await message.reply_text("<b>‼️ ᴜsᴇ ᴛʜɪs ᴄᴏᴍᴍᴀɴᴅ ɪɴ ɢʀᴏᴜᴘ...⚡</b>")
     grp_id = message.chat.id
     title = message.chat.title
     invite_link = await client.export_chat_invite_link(grp_id)
     user = await client.get_chat_member(message.chat.id, message.from_user.id)
     owner=user.status in [enums.ChatMemberStatus.ADMINISTRATOR, enums.ChatMemberStatus.OWNER] or str(message.from_user.id) in ADMINS
     if not owner:
-        return await message.reply_text('<b>ʏᴏᴜ ᴀʀᴇ ɴᴏᴛ ᴀᴅᴍɪɴ ɪɴ ᴛʜɪꜱ ɢʀᴏᴜᴘ</b>')
+        return await message.reply_text('<b>♻️ ʏᴏᴜ ᴀʀᴇ ɴᴏᴛ ᴀᴅᴍɪɴ ɪɴ ᴛʜɪꜱ ɢʀᴏᴜᴘ 🐣</b>')
     try:
         tutorial = message.text.split(" ", 1)[1]
     except:
-        return await message.reply_text("<b>Command Incomplete!!\n\nuse like this -</b>\n\n<code>/set_tutorial https://t.me/safaribotts</code>")
+        return await message.reply_text("<b>😐 Command Incomplete!!\n\nuse like this -</b>\n\n<code>/set_tutorial https://t.me/Alexa_Update</code>")
     await save_group_settings(grp_id, 'tutorial3', tutorial)
-    await message.reply_text(f"<b>Successfully changed tutorial for {title}</b>\n\nLink - {tutorial}", disable_web_page_preview=True)
-    await client.send_message(LOG_CHANNEL, f"Tutorial 2 for {title} (Group ID: {grp_id}, Invite Link: {invite_link}) has been updated by {message.from_user.username}")
+    await message.reply_text(f"<b>🎉 Successfully changed tutorial for {title}</b>\n\nLink - {tutorial}", disable_web_page_preview=True)
+    await client.send_message(LOG_CHANNEL, f"🕊 Tutorial 2 for {title} (Group ID: {grp_id}, Invite Link: {invite_link}) has been updated by {message.from_user.username}")
 
 @Client.on_message(filters.command('set_verify'))
 async def set_verify(c, m):
     chat_type = m.chat.type
     if chat_type not in [enums.ChatType.GROUP, enums.ChatType.SUPERGROUP]:
-        return await m.reply_text("<b>ᴜsᴇ ᴛʜɪs ᴄᴏᴍᴍᴀɴᴅ ɪɴ ɢʀᴏᴜᴘ...</b>")
+        return await m.reply_text("<b>♻️ ᴜsᴇ ᴛʜɪs ᴄᴏᴍᴍᴀɴᴅ ɪɴ ɢʀᴏᴜᴘ...😇 </b>")
     grp_id = m.chat.id
     title = m.chat.title
     user = await c.get_chat_member(m.chat.id, m.from_user.id)
     owner=user.status in [enums.ChatMemberStatus.ADMINISTRATOR, enums.ChatMemberStatus.OWNER] or str(message.from_user.id) in ADMINS
     if not owner:
-        return await m.reply_text('<b>ʏᴏᴜ ᴀʀᴇ ɴᴏᴛ ᴀᴅᴍɪɴ ɪɴ ᴛʜɪꜱ ɢʀᴏᴜᴘ</b>')        
+        return await m.reply_text('<b>👻 ʏᴏᴜ ᴀʀᴇ ɴᴏᴛ ᴀᴅᴍɪɴ ɪɴ ᴛʜɪꜱ ɢʀᴏᴜᴘ 💢 </b>')        
     if len(m.text.split()) == 1:
-        await m.reply("<b>Use this command like this - \n\n`/set_shortner ziplinker.net c992d5c6d3a74f6ceccbf9bc34aa27c8487c11d2`</b>")
-        return        
+          await m.reply("<b>👉 Use this command like this - \n\n`/set_shortner shortxlinks.com a26a28ac39746303ee837930f2438cd2397c5aa3`</b>")
+        return     
     sts = await m.reply("<b>♻️ ᴄʜᴇᴄᴋɪɴɢ...</b>")
     try:
         URL = m.command[1]
