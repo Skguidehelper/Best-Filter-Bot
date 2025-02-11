@@ -747,7 +747,7 @@ async def set_verify(c, m):
     if not owner:
         return await m.reply_text('<b>👻 ʏᴏᴜ ᴀʀᴇ ɴᴏᴛ ᴀᴅᴍɪɴ ɪɴ ᴛʜɪꜱ ɢʀᴏᴜᴘ 💢 </b>')        
     if len(m.text.split()) == 1:
-          await m.reply("<b>👉 Use this command like this - \n\n`/set_shortner shortxlinks.com a26a28ac39746303ee837930f2438cd2397c5aa3`</b>")
+        await m.reply("<b>👉 Use this command like this - \n\n`/set_shortner shortxlinks.com a26a28ac39746303ee837930f2438cd2397c5aa3`</b>")
         return     
     sts = await m.reply("<b>♻️ ᴄʜᴇᴄᴋɪɴɢ...</b>")
     try:
