@@ -1,4 +1,4 @@
-# This code has been modified by @Safaridev
+# This code has been modified by @ll_Alexa_Owner_ll
 # Please do not remove this credit
 import re
 import time
@@ -65,12 +65,12 @@ async def generate_code_cmd(client, message):
         premium_duration_seconds = await parse_duration(duration_str)
         if premium_duration_seconds is not None:
             token = await generate_code(duration_str)
-            await message.reply_text(f"✅ ᴄᴏᴅᴇ ɢᴇɴᴇʀᴀᴛᴇᴅ sᴜᴄᴄᴇssғᴜʟʟʏ ♻️\n\n🔑 ᴄᴏᴅᴇ: `{token}`\n⌛ Vᴀʟɪᴅɪᴛʏ: {duration_str}\n\n𝐔𝐬𝐚𝐠𝐞 : <a href=https://t.me/c/2165249824/4>/redeem</a> xxxxxxxxxx\n\n𝐍𝐨𝐭𝐞 : Oɴʟʏ Oɴᴇ Usᴇʀ Cᴀɴ Usᴇ")
+            await message.reply_text(f"✅ ᴄᴏᴅᴇ ɢᴇɴᴇʀᴀᴛᴇᴅ sᴜᴄᴄᴇssғᴜʟʟʏ ♻️\n\n🔑 ᴄᴏᴅᴇ: `{token}`\n⌛ Vᴀʟɪᴅɪᴛʏ: {duration_str}\n\n𝐔𝐬𝐚𝐠𝐞 : <a href=https://t.me/c/2165249824/4>/redeem</a> xxxxxxxxxx\n\n𝐍𝐨𝐭𝐞 : Oɴʟʏ Oɴᴇ Usᴇʀ Cᴀɴ Usᴇ 🤓")
                                        
         else:
             await message.reply_text("❌ ɪɴᴠᴀʟɪᴅ ᴅᴜʀᴀᴛɪᴏɴ ғᴏʀᴍᴀᴛ. ᴘʟᴇᴀsᴇ ᴇɴᴛᴇʀ ᴀ ᴠᴀʟɪᴅ ᴅᴜʀᴀᴛɪᴏɴ ʟɪᴋᴇ '1minute', '1hours', '1days', '1months', etc.")
     else:
-        await message.reply_text("Usage: /code 1month")
+        await message.reply_text("👉 Usage: /code 1month")
 
 @Client.on_message(filters.command("redeem"))
 async def redeem_code_cmd(client, message):
@@ -99,21 +99,21 @@ async def redeem_code_cmd(client, message):
         else:
             await message.reply_text("❌ ʏᴏᴜ ᴀʟʀᴇᴀᴅʏ ʜᴀᴠᴇ ᴘʀᴇᴍɪᴜᴍ ᴀᴄᴄᴇss.")
     else:
-        await message.reply_text("Usage: /redeem <code>")
+        await message.reply_text("👉 Usage: /redeem <code>")
 
 @Client.on_message(filters.command("clearcodes") & filters.user(ADMINS))
 async def clear_codes_cmd(client, message):
     result = await db.codes.delete_many({})
     if result.deleted_count > 0:
-        await message.reply_text(f"✅ ᴀʟʟ {result.deleted_count} ᴄᴏᴅᴇs ʜᴀᴠᴇ ʙᴇᴇɴ ʀᴇᴍᴏᴠᴇᴅ sᴜᴄᴄᴇssғᴜʟʟʏ.")
+        await message.reply_text(f"✅ ᴀʟʟ {result.deleted_count} ᴄᴏᴅᴇs ʜᴀᴠᴇ ʙᴇᴇɴ ʀᴇᴍᴏᴠᴇᴅ sᴜᴄᴄᴇssғᴜʟʟʏ.♻️")
     else:
-        await message.reply_text("⚠️ ɴᴏ ᴄᴏᴅᴇs ғᴏᴜɴᴅ ᴛʜᴀᴛ ᴄᴏᴜʟᴅ ʙᴇ ᴄʟᴇᴀʀᴇᴅ.")
+        await message.reply_text("⚠️ ɴᴏ ᴄᴏᴅᴇs ғᴏᴜɴᴅ ᴛʜᴀᴛ ᴄᴏᴜʟᴅ ʙᴇ ᴄʟᴇᴀʀᴇᴅ.👻")
 
 @Client.on_message(filters.command("allcodes") & filters.user(ADMINS))
 async def all_codes_cmd(client, message):
     all_codes = await db.codes.find({}).to_list(length=None)
     if not all_codes:
-        await message.reply_text("⚠️ ᴛʜᴇʀᴇ ᴀʀᴇ ɴᴏ ᴄᴏᴅᴇs ᴀᴠᴀɪʟᴀʙʟᴇ.")
+        await message.reply_text("⚠️ ᴛʜᴇʀᴇ ᴀʀᴇ ɴᴏ ᴄᴏᴅᴇs ᴀᴠᴀɪʟᴀʙʟᴇ.‼️")
         return
 
     codes_info = "📝 **ɢᴇɴᴇʀᴀᴛᴇᴅ ᴄᴏᴅᴇs ᴅᴇᴛᴀɪʟs:**\n\n"
