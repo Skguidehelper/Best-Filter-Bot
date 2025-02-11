@@ -22,12 +22,12 @@ async def getfile(client, message):
     try:
         query = message.text.split(" ", 1) 
         if len(query) < 2:
-            return await message.reply_text("<b>Usage:</b> /getfile <movie_name>\n\nExample: /getfile Money Heist")
+            return await message.reply_text("<b>Usage:</b> /getfile <movie_name>\n\nExample: /getfile Money Heist⚡")
         file_name = query[1].strip() 
         movie_details = await get_poster(file_name)
         
         if not movie_details:
-            return await message.reply_text(f"No results found for {file_name} on IMDB.")
+            return await message.reply_text(f"👀 No results found for {file_name} on IMDB.😐")
 
         poster = movie_details.get('poster', None)
         movie_title = movie_details.get('title', 'N/A')
@@ -59,7 +59,7 @@ async def getfile(client, message):
                 reply_markup=safari_markup,
                 parse_mode=enums.ParseMode.HTML,
             )
-            await message.reply_text("Do you want to post this content on POST_CAHNNELS ?",
+            await message.reply_text("🐣 Do you want to post this content on POST_CAHNNELS ?🔥",
                 reply_markup=reply_markup)
         else:
             await message.reply_text(
@@ -73,10 +73,10 @@ async def getfile(client, message):
                 reply_markup=safari_markup,
                 parse_mode=enums.ParseMode.HTML,
             )
-            await message.reply_text("Do you want to post this content on POST_CAHNNEL ?",
+            await message.reply_text("🐣 Do you want to post this content on POST_CAHNNEL ?🔥",
                 reply_markup=reply_markup)
     except Exception as e:
-        await message.reply_text(f"Error: {str(e)}")
+        await message.reply_text(f"😐 Error: {str(e)}")
 
 @Client.on_callback_query(filters.regex(r'^post_(yes|no)_'))
 async def post_to_channels(client, callback_query):
@@ -86,7 +86,7 @@ async def post_to_channels(client, callback_query):
         movie_details = await get_poster(file_name)
         
         if not movie_details:
-            return await callback_query.message.reply_text(f"No results found for {file_name} on IMDB.")
+            return await callback_query.message.reply_text(f"😐 No results found for {file_name} on IMDB.👀")
         
         poster = movie_details.get('poster', None)
         movie_title = movie_details.get('title', 'N/A')
@@ -130,9 +130,9 @@ async def post_to_channels(client, callback_query):
                         parse_mode=enums.ParseMode.HTML
                     )
             except Exception as e:
-                await callback_query.message.reply_text(f"Error posting to channel {channel_id}: {str(e)}")
+                await callback_query.message.reply_text(f"👀 Error posting to channel {channel_id}: {str(e)}")
         
-        await callback_query.message.edit_text("Movie details successfully posted to channels.")
+        await callback_query.message.edit_text("⚡ Movie details successfully posted to channels.🎊")
     
     elif action == "no":
-        await callback_query.message.edit_text("Movie details will not be posted to channels.")
+        await callback_query.message.edit_text("👀 Movie details will not be posted to channels.👻")
