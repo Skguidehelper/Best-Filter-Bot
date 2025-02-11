@@ -168,7 +168,7 @@ async def plan(client, message):
         InlineKeyboardButton("💳 Uᴘɪ ", callback_data='upi_info')],
 	[InlineKeyboardButton("🔥𝐉𝐎𝐈𝐍 𝐒𝐔𝐏𝐏𝐎𝐑𝐓 𝐆𝐑𝐎𝐔𝐏 👻", url="https://t.me/MOVIES_HD_STORE")], 
     
-	[InlineKeyboardButton("♻️ 𝐉𝐎𝐈𝐍 𝐔𝐏𝐃𝐀𝐓𝐄 𝐂𝐇𝐀𝐍𝐍𝐄𝐋 ⚡", url="https://t.me/MOVIES_HD_STORE ")], 
+	[InlineKeyboardButton("♻️ 𝐉𝐎𝐈𝐍 𝐔𝐏𝐃𝐀𝐓𝐄 𝐂𝐇𝐀𝐍𝐍𝐄𝐋 ⚡", url="https://t.me/MOVIES_HD_STORE")], 
         [InlineKeyboardButton("❌ ᴄʟᴏꜱᴇ ❌", callback_data="close_data")
     ]]
     await message.reply_photo(photo=(PREMIUM_PIC), caption=script.PREMIUM_CMD, reply_markup=InlineKeyboardMarkup(btn))
