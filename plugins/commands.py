@@ -847,8 +847,7 @@ async def set_verify3(c, m):
 async def set_stream(c, m):
     chat_type = m.chat.type
     if chat_type not in [enums.ChatType.GROUP, enums.ChatType.SUPERGROUP]:
-        return await m.reply_text("<b>🥀 ᴜsᴇ ᴛʜɪs ᴄᴏᴍᴍᴀɴᴅ ɪɴ ɢʀᴏᴜᴘ...💫
-        </b>")
+        return await m.reply_text("<b> ᴜsᴇ ᴛʜɪs ᴄᴏᴍᴍᴀɴᴅ ɪɴ ɢʀᴏᴜᴘ...💫</b>")
     grp_id = m.chat.id
     title = m.chat.title
     user = await c.get_chat_member(m.chat.id, m.from_user.id)
