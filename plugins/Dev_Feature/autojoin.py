@@ -1,4 +1,4 @@
-# This code has been modified by @Safaridev
+# This code has been modified by @ll_Alexa_Owner_ll
 # Please do not remove this credit
 import pyrogram
 from pyrogram import Client, filters
@@ -11,7 +11,7 @@ async def auto_accept_request(client, chat_member_update):
     try:
         await client.get_chat_member(chat_id, client.me.id) 
         await client.approve_chat_join_request(chat_id, user_id)
-        #await client.send_message(user_id, f"ʜᴇʏ {chat_member_update.from_user.mention}!\nʀᴇǫᴜᴇsᴛ ʜᴀs ʙᴇᴇɴ ᴀᴄᴄᴇᴘᴛᴇᴅ ᴡᴇʟᴄᴏᴍᴇ ᴛᴏ {chat_member_update.chat.title}")
+        #await client.send_message(user_id, f"⚡ ʜᴇʏ {chat_member_update.from_user.mention}!\nʀᴇǫᴜᴇsᴛ ʜᴀs ʙᴇᴇɴ ᴀᴄᴄᴇᴘᴛᴇᴅ ᴡᴇʟᴄᴏᴍᴇ ᴛᴏ {chat_member_update.chat.title}")
 
     except Exception as e:
-        print(f"Error approving request: {e}")
+        print(f"👀 Error approving request: {e}")
