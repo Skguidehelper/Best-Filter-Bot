@@ -112,7 +112,7 @@ MAX_LIST_ELM = environ.get("MAX_LIST_ELM", None)
 INDEX_REQ_CHANNEL = int(environ.get('INDEX_REQ_CHANNEL', '-1002255995778'))
 MELCOW_NEW_USERS = is_enabled((environ.get('MELCOW_NEW_USERS', "True")), True)
 
-REACTION = ["🔥", "❤️", "😍", "⚡", "👍", "🔥", "🥰", "👏", "😁", "🎉", "🤩", "👻", "👌", "🕊", "❤‍🔥", "⚡", "😇", "🤗", "😘", "🙊", "😎", "🍿", "🥳"]
+REACTION = ["🔥", "❤️", "😍", "⚡", "👍", "🔥", "🥰", "👏", "😁", "🎉", "🤩", "👻", "👌", "🕊", "⚡", "😇", "🤗", "😘", "🙊", "😎", "🥳"]
 
 # Streaming
 BIN_CHANNEL = int(environ.get("BIN_CHANNEL", "-1002255995778")) 
